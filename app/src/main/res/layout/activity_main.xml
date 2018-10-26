@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ngologo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ngopng" />
+
+    <TextView
+        android:id="@+id/ngoresitration"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ngologo"
+        android:layout_centerHorizontal="true"
+        android:text="NGO REGISTRATION" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/namecardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ngoresitration"
+        android:layout_alignParentStart="true"
+        app:cardElevation="8dp"
+        android:layout_margin="8dp">
+<EditText
+    android:id="@+id/name"
+    android:hint="Name"
+    android:background="@drawable/textlayout"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:padding="4dp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/purposecardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namecardview"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        app:cardElevation="8dp"
+        android:layout_margin="8dp">
+        <EditText
+            android:id="@+id/purpose"
+            android:hint="Purpose"
+            android:background="@drawable/textlayout"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:padding="4dp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/descriptioncardview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/purposecardview"
+        android:layout_alignParentStart="true"
+        android:layout_margin="8dp"
+        app:cardElevation="8dp">
+        <EditText
+            android:id="@+id/description"
+            android:hint="Short description"
+            android:background="@drawable/textlayout"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:padding="4dp"/>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/regiontext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descriptioncardview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Region of operation" />
+
+    <Spinner
+        android:id="@+id/countryspinner"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/regiontext"
+        android:layout_margin="8dp"></Spinner>
+
+    <Spinner
+        android:id="@+id/statespinner"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/regiontext"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"></Spinner>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/phonenumebrcardview"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countryspinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        app:cardElevation="8dp">
+
+        <EditText
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:padding="4dp"
+            android:layout_alignTop="@+id/phonenumebrcardview"
+            android:background="@drawable/textlayout"
+            android:hint="Primary Contact" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/emialcardview"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        app:cardElevation="8dp"
+        android:layout_below="@+id/phonenumebrcardview">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/textlayout"
+            android:padding="4dp"
+            android:hint="Email"
+            android:id="@+id/emailtextview"/>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emialcardview"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emialcardview"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonstyle"
+            android:padding="8dp"
+            android:text="Register"
+            android:textAlignment="center" />
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+</ScrollView>

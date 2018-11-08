@@ -50,6 +50,8 @@ public class RequestRecyclerAdapter extends RecyclerView.Adapter<RequestRecycler
                 intent.putExtra("position",pos);
                 intent.putIntegerArrayListExtra("imagearraylist",immagearraylist);
                 context.startActivity(intent);
+
+
             }
         });
 

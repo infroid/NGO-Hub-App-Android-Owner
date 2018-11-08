@@ -3,4 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/requesttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requests"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/requestrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@+id/requesttitle">
+
+    </android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

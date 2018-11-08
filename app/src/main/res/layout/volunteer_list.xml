@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/volunteercardview"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="8dp"
+        android:layout_height="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/circularimageview"
+               android:layout_width="100dp"
+               android:layout_centerVertical="true"
+               android:padding="4dp"
+               android:layout_height="100dp"/>
+
+            <TextView
+                android:id="@+id/volunteername"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/circularimageview"
+                android:text="Name"
+                android:padding="4dp"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:padding="4dp"
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/volunteername"
+                android:layout_toEndOf="@+id/circularimageview"
+                android:text="Location"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/status"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:layout_toEndOf="@+id/circularimageview"
+                android:text="Status"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/invitetitle"
+                android:padding="4dp"
+                android:textSize="16dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/volunteername"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="58dp"
+                android:text="Invite" />
+
+            <Switch
+                android:id="@+id/volunteerswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/invitetitle"
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:thumb="@drawable/rectengle_spinner_thumb"
+                android:track="@drawable/rectengle_spinner_track" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

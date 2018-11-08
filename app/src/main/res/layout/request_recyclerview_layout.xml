@@ -5,12 +5,15 @@
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp"
+    android:id="@+id/requestrelativelayout"
     android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
             android:padding="2dp"
             android:id="@+id/notgointerer"
             android:layout_width="wrap_content"
@@ -22,6 +25,8 @@
             android:textSize="18sp" />
 
         <TextView
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
             android:padding="2dp"
             android:id="@+id/goingthere"
             android:layout_width="wrap_content"
@@ -50,21 +55,9 @@
             android:text="Description"
             android:textColor="@color/colorAccent" />
 
-        <ImageView
-            android:id="@+id/going"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:layout_alignBottom="@+id/notgointerer"
-            android:layout_toEndOf="@+id/notgointerer"
-            android:src="@drawable/going" />
 
-        <ImageView
-            android:id="@+id/notgoing"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:layout_alignTop="@+id/goingthere"
-            android:layout_toEndOf="@+id/goingthere"
-            android:src="@drawable/notgoing" />
+
+
 
     </RelativeLayout>
 

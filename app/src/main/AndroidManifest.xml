@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".NavigationActivity" />
-        <activity android:name=".VolunteerPopulate"></activity>
+        <activity android:name=".VolunteerPopulate" />
+        <activity android:name=".RequestDetails"></activity>
     </application>
 
 </manifest>

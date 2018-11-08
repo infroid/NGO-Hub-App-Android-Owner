@@ -1,15 +1,18 @@
 package com.example.parasrawat2124.ngo.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.parasrawat2124.ngo.R;
+import com.example.parasrawat2124.ngo.VolunteerPopulate;
 
 import org.w3c.dom.Text;
 
@@ -41,12 +44,28 @@ public class VolunteerAdaptor extends RecyclerView.Adapter<VolunteerAdaptor.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VolunteerAdaptor.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final VolunteerAdaptor.ViewHolder viewHolder, final int i) {
 
         viewHolder.Name.setText(names.get(i));
         viewHolder.Location.setText(location.get(i));
         viewHolder.Status.setText(status.get(i));
         viewHolder.imageView.setImageResource(photolist.get(i));
+        viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name=names.get(i);
+                String loc=location.get(i);
+                String stat=status.get(i);
+                int pos=i;
+                Intent intent=new Intent(context,VolunteerPopulate.class);
+                intent.putExtra("name",name);
+                intent.putExtra("location",loc);
+                intent.putExtra("status",stat);
+                intent.putExtra("position",i);
+                intent.putExtra("imagelist",photolist);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -58,6 +77,7 @@ public class VolunteerAdaptor extends RecyclerView.Adapter<VolunteerAdaptor.View
         TextView Name;
         TextView Status;
         TextView Location;
+        RelativeLayout relativeLayout;
         CircleImageView imageView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -65,6 +85,7 @@ public class VolunteerAdaptor extends RecyclerView.Adapter<VolunteerAdaptor.View
             Status=itemView.findViewById(R.id.status);
             Location=itemView.findViewById(R.id.location);
             imageView=itemView.findViewById(R.id.circularimageview);
+            relativeLayout=itemView.findViewById(R.id.VolunteerRelativeLa);
 
         }
     }

@@ -38,6 +38,7 @@ public class ReachAdaptor extends RecyclerView.Adapter<ReachAdaptor.Viewholder> 
             public void onClick(View view) {
                 arrayList.remove(i);
                 notifyItemRemoved(i);
+                notifyDataSetChanged();
                 notifyItemRangeChanged(i,arrayList.size());
             }
         });

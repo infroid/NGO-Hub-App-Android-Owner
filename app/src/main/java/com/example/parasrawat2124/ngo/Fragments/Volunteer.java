@@ -24,8 +24,6 @@ public class Volunteer extends Fragment {
     ArrayList<String> location=new ArrayList<>();
     ArrayList<String> status=new ArrayList<>();
     ArrayList<Integer> photolist=new ArrayList<>();
-
-
     View view;
     @Nullable
     @Override

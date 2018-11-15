@@ -1,8 +1,35 @@
-<resources>
+<resources xmlns:color="http://schemas.android.com/tools">
     <string name="app_name">NGO</string>
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="state">
+        <item>Haryana</item>
+        <item>Punjab</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttrakhand</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu Kashmir</item>
+        <item>Rajasthan</item>
+    </string-array>
+    <string-array name="country">
+        <item>India</item>
+        <item>Japan</item>
+        <item>China</item>
+        <item>Denmark</item>
+        <item>Italy</item>
+        <item>France</item>
+        <item>Germany</item>
+    </string-array>
+    <string-array name="City">
+        <item>City1</item>
+        <item>City2</item>
+        <item>City3</item>
+        <item>City4</item>
+        <item>City5</item>
+        <item>City6</item>
+        <item>City7</item>
+    </string-array>
 </resources>

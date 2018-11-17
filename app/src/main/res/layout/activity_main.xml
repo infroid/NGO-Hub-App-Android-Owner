@@ -12,11 +12,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <TextView
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_margin="4dp"
+        android:text="NGO Details"
+        android:layout_below="@id/ngoresitration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/perosnl"/>
 
     <ImageView
         android:id="@+id/ngologo"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ngopng" />
@@ -31,10 +41,22 @@
         android:text="NGO REGISTRATION" />
 
     <android.support.v7.widget.CardView
+        android:layout_margin="4dp"
+        app:cardCornerRadius="8dp"
+        android:padding="8dp"
+        app:cardElevation="8dp"
+        android:id="@+id/personaldetailscardview"
+        android:layout_below="@id/perosnl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
         android:id="@+id/namecardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ngoresitration"
         android:layout_alignParentStart="true"
         app:cardElevation="8dp"
         android:layout_margin="8dp">
@@ -53,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/namecardview"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         app:cardElevation="8dp"
         android:layout_margin="8dp">
         <EditText
@@ -82,75 +104,183 @@
             android:padding="4dp"/>
     </android.support.v7.widget.CardView>
 
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
     <TextView
+        android:textSize="15dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
         android:id="@+id/regiontext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/descriptioncardview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        android:layout_below="@id/personaldetailscardview"
+        android:layout_alignStart="@+id/perosnl"
+        android:layout_marginTop="10dp"
         android:text="Region of operation" />
 
-    <Spinner
-        android:id="@+id/countryspinner"
-        android:layout_width="150dp"
-        android:layout_height="36dp"
-        android:layout_below="@+id/regiontext"
-        android:layout_margin="8dp"></Spinner>
-
-    <Spinner
-        android:id="@+id/statespinner"
-        android:layout_width="150dp"
-        android:layout_height="36dp"
-        android:layout_below="@+id/regiontext"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="8dp"></Spinner>
-
     <android.support.v7.widget.CardView
-        android:id="@+id/phonenumebrcardview"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/countryspinner"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        app:cardElevation="8dp">
-
-        <EditText
-            android:id="@+id/phonenumber"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:padding="4dp"
-            android:layout_alignTop="@+id/phonenumebrcardview"
-            android:background="@drawable/textlayout"
-            android:hint="Primary Contact" />
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/emialcardview"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/regioncardview"
+        android:layout_below="@+id/regiontext"
+        android:layout_width="match_parent"
         android:layout_margin="8dp"
         app:cardElevation="8dp"
-        android:layout_below="@+id/phonenumebrcardview">
-        <EditText
+        app:cardCornerRadius="8dp"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:background="@drawable/textlayout"
-            android:padding="4dp"
-            android:hint="Email"
-            android:id="@+id/emailtextview"/>
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/regioncardview"
+            android:layout_alignTop="@+id/regioncardview">
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:id="@+id/countryspinnercardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <Spinner
+                android:textAlignment="center"
+                android:entries="@array/country"
+                android:id="@+id/countryspinner"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="38dp"></Spinner>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:layout_below="@id/countryspinnercardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <Spinner
+                android:textAlignment="center"
+                android:entries="@array/state"
+                android:id="@+id/statespinner"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"></Spinner>
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regioncardview"
+        android:layout_alignStart="@+id/perosnl"
+        android:layout_marginTop="8dp"
+        android:text="Contact Details"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+<android.support.v7.widget.CardView
+    android:id="@+id/contactdetailscardview"
+    android:layout_below="@+id/contact"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:id="@+id/primaryphonecardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp">
+            <EditText
+                android:id="@+id/primaryphone"
+                android:hint="Primary Contact"
+                android:background="@drawable/textlayout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:padding="4dp"/>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/secondryphonecardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/primaryphonecardview"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp">
+            <EditText
+                android:id="@+id/secondryphone"
+                android:hint="Secondry Contact"
+                android:background="@drawable/textlayout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:padding="4dp"/>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/emailcardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondryphonecardview"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp">
+            <EditText
+                android:id="@+id/email"
+                android:hint="Email"
+                android:background="@drawable/textlayout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:padding="4dp"/>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/websitecardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondryphonecardview"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp">
+            <EditText
+                android:id="@+id/website"
+                android:hint="Website Link if any"
+                android:background="@drawable/textlayout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:padding="4dp"/>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emialcardview"
+        android:layout_below="@+id/contactdetailscardview"
         android:layout_centerHorizontal="true"
         app:cardElevation="8dp"
-        app:cardCornerRadius="16dp"
-        android:layout_marginTop="24dp">
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp">
 
         <TextView
             android:textColor="@android:color/white"
@@ -163,6 +293,8 @@
             android:text="Register"
             android:textAlignment="center" />
     </android.support.v7.widget.CardView>
+
+
 
 </RelativeLayout>
 </ScrollView>

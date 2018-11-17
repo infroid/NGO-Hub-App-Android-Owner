@@ -15,9 +15,10 @@
         android:textColor="@color/colorAccent"/>
 
     <android.support.v7.widget.RecyclerView
+        android:layout_margin="8dp"
         android:id="@+id/requestrecyclerview"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/requesttitle">
 
     </android.support.v7.widget.RecyclerView>

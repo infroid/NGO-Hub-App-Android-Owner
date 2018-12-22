@@ -1,5 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ngoimage"
+        android:src="@drawable/poverty"
+        android:layout_width="150dp"
+        android:layout_margin="16dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="24dp"
+        android:padding="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@id/ngoimage"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:id="@+id/namecardview"
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="Name of the NGO"/>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:id="@+id/purposecardview"
+                android:layout_below="@id/namecardview"
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="Purpose Statement of the NGO"
+                    />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_below="@id/purposecardview"
+                android:id="@+id/descriptioncardview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="Description Statement of the NGO"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_below="@id/descriptioncardview"
+                android:id="@+id/contactcardview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/contacttext"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="Contact"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_below="@+id/contactcardview"
+                android:id="@+id/websitecardview"
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="Website link for the NGO"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_margin="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_below="@id/websitecardview"
+                android:id="@+id/regionofactioncardview"
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="Region of action for the  go"/>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>
